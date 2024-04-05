@@ -18,14 +18,14 @@ public class NotificationTask {
 
     private String message;
 
-    private LocalDateTime notificationDataTime;
+    private LocalDateTime notificationDateTime;
 
 
 
     public NotificationTask(Long chatId, String message, LocalDateTime notificationDataTime) {
         this.chatId = chatId;
         this.message = message;
-        this.notificationDataTime = notificationDataTime;
+        this.notificationDateTime = notificationDataTime;
     }
 
     public Long getId() {
@@ -40,8 +40,8 @@ public class NotificationTask {
         return message;
     }
 
-    public LocalDateTime getNotificationDataTime() {
-        return notificationDataTime;
+    public LocalDateTime getNotificationDateTime() {
+        return notificationDateTime;
     }
 
     @Override
@@ -49,12 +49,12 @@ public class NotificationTask {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         NotificationTask that = (NotificationTask) o;
-        return Objects.equals(id, that.id) && Objects.equals(chatId, that.chatId) && Objects.equals(message, that.message) && Objects.equals(notificationDataTime, that.notificationDataTime);
+        return Objects.equals(id, that.id) && Objects.equals(chatId, that.chatId) && Objects.equals(message, that.message) && Objects.equals(notificationDateTime, that.notificationDateTime);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, chatId, message, notificationDataTime);
+        return Objects.hash(id, chatId, message, notificationDateTime);
     }
 
     @Override
@@ -63,7 +63,7 @@ public class NotificationTask {
                 "id=" + id +
                 ", chatId=" + chatId +
                 ", message='" + message + '\'' +
-                ", notificationDataTime=" + notificationDataTime +
+                ", notificationDataTime=" + notificationDateTime +
                 '}';
     }
 }
