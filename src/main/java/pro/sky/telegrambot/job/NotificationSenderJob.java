@@ -42,7 +42,7 @@ public class NotificationSenderJob {
 
             telegramBotSender.send(
                     notificationTask.getChatId(),
-                    "Напоминание" + notificationTask.getMessage()
+                    "Напоминание: " + notificationTask.getMessage()
             );
         }
 
